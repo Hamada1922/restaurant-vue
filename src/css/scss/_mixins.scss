@@ -1,0 +1,43 @@
+// media queries
+@mixin s-size {
+  @media (max-width: 450px) {
+    @content;
+  }
+}
+@mixin max-mobile {
+  @media (max-width: 767px) {
+    @content;
+  }
+}
+@mixin min-small {
+  @media (min-width: 768px) {
+    @content;
+  }
+}
+@mixin max-small {
+  @media (max-width: 991px) {
+    @content;
+  }
+}
+@mixin min-medium {
+  @media (min-width: 992px) {
+    @content;
+  }
+}
+@mixin max-medium {
+  @media (max-width: 1199px) {
+    @content;
+  }
+}
+@mixin min-large {
+  @media (min-width: 1200px) {
+    @content;
+  }
+}
+// prefixes
+@mixin prefix($prop, $val) {
+  #{'-webkit-' + $prop}: $val;
+  #{'-moz-' + $prop}: $val;
+  #{'-0-' + $prop}: $val;
+  #{$prop}: $val;
+}
